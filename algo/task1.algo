@@ -1,0 +1,18 @@
+ALGORITHM CIRCULAR_PERMUTATION
+VAR
+  x, y, z, temp : INTEGER;
+BEGIN
+  Write("Give the x number");
+  Read(x); //x=1
+  Write("Give the y number");
+  Read(y);//y=2
+
+  Write("Give the z number");
+  Read(z);z=3
+
+  temp := x;//x=1
+  x := y;//x=2
+  y := z;//y=3
+  z := temp;//z=2
+END ALGORITHM
+END

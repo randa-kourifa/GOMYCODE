@@ -1,0 +1,25 @@
+ALGORITHM IS_PALINDROME
+VAR
+  word: STRING
+  i,lenMotie: INTEGER
+  is_palindrome: BOOLEAN
+BEGIN
+  is_palindrome := TRUE
+
+  i := 1
+//level
+  lenMotie = LENGTH(word) / 2 
+  WHILE i <= lenMotie AND is_palindrome DO // 5/2 = 2.5 = 2
+    IF word[i] <> word[LENGTH(word) - i + 1] THEN 
+      is_palindrome := FALSE
+    END IF
+    i := i + 1
+  END WHILE
+
+  IF is_palindrome THEN
+    write("The word is a palindrome")
+  ELSE
+    write("The word is not a palindrome")
+  END IF
+  
+END

@@ -1,0 +1,33 @@
+body {
+	display: flex;
+	flex-direction: column;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: #f1f1f1;
+	gap: 20px;
+	min-height: 100vh;
+}
+.monkey {
+	width: 150px;
+	height: 150px;
+}
+.myparagraph {
+	text-align: center;
+}
+.searchContainer {
+	display: flex;
+}
+.searchContainer a {
+	margin-right: 10px;
+}
+.mybutton {
+	width: 40px;
+}

@@ -1,0 +1,80 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+}
+
+nav > ul {
+	width: 100%;
+	display: flex;
+	list-style-type: none;
+	justify-content: center;
+	gap: 50px;
+	padding: 10px 0;
+
+	background-color: #dcdcdc;
+}
+h1 {
+	font-size: clamp(30px, 3vw, 45px);
+}
+#home p {
+	font-size: clamp(20px, 2.5vw, 35px);
+	background: linear-gradient(101.74deg, #f70303 8.14%, #ff07f5 42.23%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+
+	text-align: right;
+}
+#home {
+	min-height: 100vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+#home > img {
+	width: clamp(312px, 66vw, 559px);
+}
+#bestsellers {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 40px;
+	margin-bottom: 70px;
+}
+#bestsellers > div {
+	display: flex;
+	gap: 3vw;
+	align-items: center;
+}
+#bestsellers > div > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	padding: 10px;
+	background-color: #d9d9d9;
+}
+#bestsellers > div > div > img {
+	width: clamp(145px, 20vw, 250px);
+}
+#bestsellers > div > div > div {
+	display: flex;
+	justify-content: space-around;
+	gap: 10px;
+	align-items: center;
+	width: 100%;
+}
+#bestsellers button {
+	background: #6c63ff;
+	border-radius: 6px;
+	color: white;
+	border: none;
+
+	padding: 15px 10px;
+}

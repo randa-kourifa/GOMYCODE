@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Exercise 2</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>To-do List</h1>
+    <input type="text" placeholder="Add your todo" />
+    <button>Add</button>
+    <ul id="todo"></ul>
+
+    <script>
+        var input = document.querySelector("input"),
+            add = document.querySelector("button"),
+            todoList = document.querySelector("#todo")
+
+        add.addEventListener("click", function(e) {
+            e.preventDefault()
+            var listElement = document.createElement("li")
+
+            function generateColor() {
+                const arr = [
+                    "a",
+                    "b",
+                    "c",
+                    "d",
+                    "e",
+                    "f",
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                ]
+                let color = "#"
+                for (let i = 0; i < 6; i++) {
+                    let random = Math.floor(Math.random() * arr.length)
+                    color += arr[random]
+                }
+                return color
+            }
+            listElement.innerText = input.value
+            input.value = ""
+            listElement.style.backgroundColor = generateColor()
+            todoList.append(listElement)
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 200px;
+}
+
+.container {
+    max-width: 360px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.progress-container {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-bar {
+    position: absolute;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background-color: black;
+    z-index: -1;
+    transition: 0.5s ease;
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 30px;
+    border: 2px solid rgb(187, 187, 187);
+    margin: 20px 0;
+}
+
+.active-circle {
+    border: 2px solid black;
+}
+
+.container button {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.container button:disabled {
+    background-color: rgb(230, 230, 230);
+    color: black;
+    cursor: not-allowed;
+}

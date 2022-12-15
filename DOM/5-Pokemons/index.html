@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <h1>Pokemons Tables</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Image</th>
+                    <th>Types</th>
+                    <th>Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ivysaur</td>
+                    <td>
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" alt="Ivysaur" />
+                    </td>
+                    <td>Grass, Poison</td>
+                    <td class="count">1</td>
+
+                    <td class="add" onclick="addOne(event)">
+                        <i class="fas fa-plus"></i>
+                    </td>
+                    <td class="remove" onclick="removeOne(event)">
+                        <i class="fas fa-minus"></i>
+                    </td>
+                    <td class="del" onclick="deletePokemon(event)">
+                        <i class="fas fa-trash"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Venusaur</td>
+                    <td>
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png " alt="Venusaur " />
+                    </td>
+                    <td>Grass, Poison</td>
+                    <td class="count">1</td>
+
+                    <td class="add" onclick="addOne(event) ">
+                        <i class="fas fa-plus"></i>
+                    </td>
+                    <td class="remove" onclick="removeOne(event)">
+                        <i class="fas fa-minus"></i>
+                    </td>
+                    <td class="del" onclick="deletePokemon(event) ">
+                        <i class="fas fa-trash"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Charmander</td>
+                    <td>
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png " alt="Charmander " />
+                    </td>
+                    <td>Fire</td>
+                    <td class="count">1</td>
+
+                    <td class="add" onclick="addOne(event) ">
+                        <i class="fas fa-plus"></i>
+                    </td>
+                    <td class="remove" onclick="removeOne(event)">
+                        <i class="fas fa-minus"></i>
+                    </td>
+                    <td class="del" onclick="deletePokemon(event) ">
+                        <i class="fas fa-trash"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Charmeleon</td>
+                    <td>
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png " alt="Charmeleon " />
+                    </td>
+                    <td>Fire</td>
+                    <td class="count">1</td>
+
+                    <td class="add" onclick="addOne(event) ">
+                        <i class="fas fa-plus"></i>
+                    </td>
+                    <td class="remove" onclick="removeOne(event)">
+                        <i class="fas fa-minus"></i>
+                    </td>
+                    <td class="del" onclick="deletePokemon(event) ">
+                        <i class="fas fa-trash"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Charizard</td>
+                    <td>
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png " alt="Charizard " />
+                    </td>
+                    <td>Fire</td>
+                    <td class="count">1</td>
+
+                    <td class="add" onclick="addOne(event) ">
+                        <i class="fas fa-plus"></i>
+                    </td>
+                    <td class="remove" onclick="removeOne(event)">
+                        <i class="fas fa-minus"></i>
+                    </td>
+                    <td class="del" onclick="deletePokemon(event) ">
+                        <i class="fas fa-trash"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <script src="./script.js "></script>
+</body>
+
+</html>
