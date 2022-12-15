@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    --primary-color: #f5f5f5;
+    --secondary-color: #333;
+}
+
+body.dark {
+    --primary-color: rgb(0, 0, 0);
+    --secondary-color: #fff;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+}
+
+.topnav a {
+    display: block;
+    color: var(--primary-color);
+    text-align: center;
+    padding: 13px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.topnav a.active {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.topnav .logo {
+    display: block;
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 7px 10px 3px 10px;
+    margin-top: 2px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav .logo img {
+    width: 30px;
+    height: auto;
+}
+
+.topnav .logo:hover {
+    background: transparent;
+}
+
+.topnav button {
+    display: none;
+    margin-left: auto;
+    padding: 16px 17px;
+    border: 0;
+    background: var(--primary-color);
+    outline: none;
+    cursor: pointer;
+}
+
+.container {
+    padding: 0px 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav button.icon {
+        display: block;
+    }
+    button.icon:focus,
+    button.icon:hover {
+        border: 0;
+        outline: none;
+        background: var(--primary-color);
+    }
+    .topnav.responsive {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .topnav.responsive a {
+        display: block;
+        text-align: left;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .logo {
+        margin-right: auto;
+    }
+}

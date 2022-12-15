@@ -3,9 +3,9 @@ const accordions = document.querySelectorAll('.accordion');
 for (let i = 0; i < accordions.length; i++) {
 
     accordions[i].addEventListener('click', function() {
-        // change the background of the section  when click
+
         accordions[i].classList.toggle('active');
-        // open the panel on click
+
         let panel = accordions[i].nextElementSibling;
 
         if (panel.style.display === 'block') {
@@ -13,8 +13,18 @@ for (let i = 0; i < accordions.length; i++) {
         } else {
             panel.style.display = 'block';
         }
-
-
     })
 
 };
+// another way to do it
+// function hide(e) {
+//     var x = e.target.nextElementSibling;
+//     console.log(x)
+
+
+//     if (x.style.display === "none") {
+//         x.style.display = "block";
+//     } else {
+//         x.style.display = "none";
+//     }
+// }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="leftSide">
+            <h1>Sign In</h1>
+            <p>Sign in with your Credentials to access</p>
+            <form>
+                <label for="email">email</label>
+                <input type="email" name="email" placeholder="Enter your email" />
+                <label for="password">password</label>
+                <input type="password" id="pwd" name="password" placeholder="Enter your email" />
+                <p id="error"></p>
+                <button type="submit" name="submit">Sign In</button>
+            </form>
+        </div>
+        <div class="rightSide">
+            <img id="loginImage" src="login.svg" alt="" />
+        </div>
+    </div>
+    <script>
+        const form = document.querySelector("form")
+        var errorMsg = document.getElementById("error")
+        const pwd = document.querySelector("#pwd").value
+        form.addEventListener("submit", (e) => {
+            // prevent default behaviour
+            e.preventDefault()
+                // call the function to validate the form
+            checkInputs()
+        })
+
+        // write the function to validate the form
+        function checkInputs() {
+            // if the password is less than 8 characters
+            // sset innerHTML of error message
+            // to "Password must be at least 8 characters"
+            // else set innerHTML to "Success"
+            // and change the color of the error message to green
+            if (pwd.length < 8) {
+                errorMsg.innerHTML = "Password must be at least 8 characters"
+            } else {
+                errorMsg.innerHTML = "Success"
+                errorMsg.style.color = "green"
+            }
+        }
+    </script>
+</body>
+
+</html>
