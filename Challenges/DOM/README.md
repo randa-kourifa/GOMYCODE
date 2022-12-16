@@ -6,8 +6,9 @@
 
 ## colors ----> 2
 
+## hex-colors ---->2
+
 (+1 if the colors are randomly generated)
-(+1 if you do the gradient one)
 
 ## quotes ----> 3
 
@@ -20,6 +21,7 @@
 ## shoppingcart ----> 6
 
 (+1 if you add some styles)
+remember what we did in pokemons
 
 ## TODO LIST ----> 7
 
