@@ -11,7 +11,7 @@ alert("hello world")
 
 //prompt
 const Name = prompt("what is your name ?")
-alert("hello", Name)
+console.log(Name)
 
 
 // confirm

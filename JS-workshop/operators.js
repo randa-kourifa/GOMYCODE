@@ -6,6 +6,11 @@
 /* *= equivalent to x = x * y */
 // /= equivalent to x = x / y
 
+// x++ equivalent to x = x + 1
+// x-- equivalent to x = x - 1
+// ++x equivalent to x = 1 + x
+
+
 
 // - comparison operators (==, ===, !=, !==, >, <, >=, <=)
 // comparison operators return a boolean value (true or false)
@@ -57,7 +62,7 @@ switch (expression) {
 }
 
 //ex:
-var day = "Monday";
+var day = "Tuesday";
 switch (day) {
     case "Tuesday":
         console.log("Today is Tuesday");
