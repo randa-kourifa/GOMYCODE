@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <h1>Shopping Cart List</h1>
+        <table>
+            <thead>
+                <tr class="rowhead">
+                    <th>Product</th>
+                    <th>Unit Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Product 1</td>
+                    <td class="unitprice">100</td>
+                    <td class="qt">2</td>
+                    <td class="total">200</td>
+                    <th>
+                        <div>heart</div>
+                        <div onclick="add(event)">add</div>
+                        <div onclick="minus(event)">minus</div>
+                        <div onclick="deleteRow(event)">delete</div>
+                    </th>
+                </tr>
+                <tr>
+                    <td>Product 2</td>
+                    <td class="unitprice">300</td>
+                    <td class="qt">2</td>
+                    <td class="total">00</td>
+                    <th>
+                        <div>heart</div>
+                        <div onclick="add(event)">add</div>
+                        <div onclick="minus(event)">minus</div>
+                        <div onclick="deleteRow(event)">delete</div>
+                    </th>
+                </tr>
+                <tr>
+                    <td>Product 3</td>
+                    <td class="unitprice">50</td>
+                    <td class="qt">1</td>
+                    <td class="total">200</td>
+                    <th>
+                        <div>heart</div>
+                        <div onclick="add(event)">add</div>
+                        <div onclick="minus(event)">minus</div>
+                        <div onclick="deleteRow(event)">delete</div>
+                    </th>
+                </tr>
+                <tr class="cartTotal">
+                    <td>Total: <span></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <script>
+        function deleteRow(e) {
+            e.target.parentElement.parentElement.remove()
+            updateTotal()
+        }
+
+        function add(e) {
+            const row = e.target.parentElement.parentElement
+            qtElem = row.querySelector(".qt")
+            unitElem = row.querySelector(".unitprice")
+            totalElem = row.querySelector(".total")
+
+            qtElem.innerText++
+                totalElem.innerText = unitElem.innerText * qtElem.innerText
+
+            updateTotal()
+        }
+
+        function minus(e) {
+            const row = e.target.parentElement.parentElement
+            const qtElem = row.querySelector(".qt")
+            const unitElem = row.querySelector(".unitprice")
+            const totalElem = row.querySelector(".total")
+            if (qtElem.innerText == "1") return false
+            qtElem.innerText--
+                totalElem.innerText = unitElem.innerText * qtElem.innerText
+            updateTotal()
+        }
+        var i = 4
+        console.log(i ** i)
+
+        function updateTotal() {
+            totalarray = document.querySelectorAll(".total")
+            totalCart = document.querySelector(".cartTotal span")
+            let total = 0
+            totalarray.forEach((item) => {
+                total += parseInt(item.innerText)
+            })
+            totalCart.innerText = total
+        }
+    </script>
+</body>
+
+</html>
