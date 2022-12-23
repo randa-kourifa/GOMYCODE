@@ -1,6 +1,6 @@
 // using destructuring exercise
 const person = {
-        name: 'John',
+        Name: 'John',
         age: 100,
         city: 'New York',
     }
@@ -9,8 +9,10 @@ const person = {
     // 2. using destructuring, create a variable called "age"
     // and assign it the value of the age property of the object below
 
-//know imagine you have a response from a backend
-//and it is an object with the following structure
+const { Name, age } = person
+console.log(Name, age)
+    //know imagine you have a response from a backend
+    //and it is an object with the following structure
 const response = {
         data: {
             user: {
@@ -28,6 +30,17 @@ const response = {
     //"status" and "message"
     //if the status is 200, return the message and the name
     //  verify your function with console.log
+function destParams({
+    data: { user: { name } },
+    status,
+    message
+}) {
+    if (status === 200) {
+        return `${message} ${name}`
+    }
+}
+console.log(destParams(response))
+
 
 // rest operator exercise
 // 1. create a function that takes an array as a parameter
@@ -35,6 +48,17 @@ const response = {
 // 3. using the rest operator, create a variable called "rest"
 // 4. using the rest operator, create a variable called "last"
 // 5. using the rest operator, create a variable called "second"
+
+const RestOperator = (arr) => {
+    const [first, ...rest] = arr
+    const [second, ...last] = rest
+    const arrr = []
+
+    return { first, rest, last, second }
+}
+console.log(RestOperator([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+
+
 
 // concat exercise
 // 1. create a function that takes multiple numbers as parameters
@@ -52,3 +76,10 @@ const response = {
 //     rest: 23456789,
 //     last: 10,
 //}
+
+const concat = (...args) => {
+    const [first, ...rest] = args
+    const [second, ...last] = rest
+    return { first, rest, last: args[args.length - 1] }
+}
+console.log(concat(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
