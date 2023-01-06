@@ -2,6 +2,11 @@
 /Challenges/DOM/**/*.html
 /Challenges/DOM/**/*.js
 /Challenges/DOM/**/*.css
+<<<<<<< HEAD
 /crash-course-react
 /react-first-app/node_modules
 /node_modules
+=======
+
+/quiz-project
+>>>>>>> 9c10a783d626b1912034c16d9f80d3f472693e38
