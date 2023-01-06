@@ -1,6 +1,7 @@
 # Session 6 janvier
 
 github.com/ryanmcdermott/clean-code-javascript
+github.com/EbookFoundation/free-programming-books
 
 ### ask questions package.json, node_modules, a component,
 
