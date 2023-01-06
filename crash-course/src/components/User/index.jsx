@@ -1,11 +1,11 @@
 import React from "react"
 
-export default function User({ children }) {
+export default function User({ AttributeUser }) {
 	return (
-		<div>
-			<div>name : {user.name}</div>
-			<div>id : {user.id}</div>
-			<div>color: {user.color ? user.color : ""}</div>
+		<div key={AttributeUser.id}>
+			<div>name : {AttributeUser.name}</div>
+			<div>id : {AttributeUser.id}</div>
+			<div>color: {AttributeUser.color}</div>
 		</div>
 	)
 }
