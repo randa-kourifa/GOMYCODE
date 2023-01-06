@@ -52,8 +52,6 @@ console.log(destParams(response))
 const RestOperator = (arr) => {
     const [first, ...rest] = arr
     const [second, ...last] = rest
-    const arrr = []
-
     return { first, rest, last, second }
 }
 console.log(RestOperator([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
@@ -80,6 +78,6 @@ console.log(RestOperator([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
 const concat = (...args) => {
     const [first, ...rest] = args
     const [second, ...last] = rest
-    return { first, rest, last: args[args.length - 1] }
+    return { first, rest, last, second }
 }
 console.log(concat(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
