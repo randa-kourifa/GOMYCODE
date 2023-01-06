@@ -1,5 +1,7 @@
 # Session 6 janvier
 
+github.com/ryanmcdermott/clean-code-javascript
+
 ### ask questions package.json, node_modules, a component,
 
 ### (web dev is funny) talk about the quiz app we gonna build
@@ -7,6 +9,10 @@
 ### Create a React Project with vite
 
 ### add boostrap
+
+### inline style
+
+### src images from public folder and from import
 
 ### rfc snippet
 
@@ -20,7 +26,7 @@
 
 ### JSX how to use js object in html
 
-### JSX how to use js array in html
+### JSX how to use js array in html map
 
 ### react ecommerce card component
 
