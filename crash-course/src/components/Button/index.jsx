@@ -1,7 +1,7 @@
 import React from "react"
 
 function Button({ OurPropsAsFunction }) {
-	return <div onClick={(e) => OurPropsAsFunction("fdsfdse")}>Button</div>
+	return <div onClick={() => OurPropsAsFunction(fullname)}>Button</div>
 }
 
 export default Button

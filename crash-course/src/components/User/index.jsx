@@ -1,19 +1,11 @@
 import React from "react"
 
-export default function User({ OurPropUser }) {
-	const users = [
-		{ name: "hamza", id: 1 },
-		{ name: "ali", id: 2 },
-		{ name: "somthing", id: 45 },
-		{ name: "ahmed", id: 3 },
-	]
-	{
-		users.map((user) => <User key={user.id} OurPropUser={user} />)
-	}
+export default function User({ children }) {
 	return (
 		<div>
-			<div>name : {OurPropUser?.name}</div>
-			<div>id : {OurPropUser?.id}</div>
+			<div>name : {user.name}</div>
+			<div>id : {user.id}</div>
+			<div>color: {user.color ? user.color : ""}</div>
 		</div>
 	)
 }
