@@ -2,5 +2,6 @@
 /Challenges/DOM/**/*.html
 /Challenges/DOM/**/*.js
 /Challenges/DOM/**/*.css
-
+/react-first-app/node_modules
+/node_modules
 
