@@ -1,0 +1,25 @@
+.App {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 35px;
+    min-height: 100vh;
+    background-color: #272727;
+}
+
+.addingSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #272727;
+}
+
+.addingSection form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
