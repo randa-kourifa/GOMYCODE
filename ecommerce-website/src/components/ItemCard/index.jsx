@@ -1,10 +1,10 @@
 import React from "react"
-import classes from "./style.module.css"
-export default function ItemCard({ price, name }) {
+
+export function ItemCard({ price, name, image }) {
 	return (
-		<div className={classes.cardContainer}>
+		<div className={classe.cardContainer}>
 			<h3>{name}</h3>
-			<img src="/src/assets/greenshoes.png" alt="shoe" />
+			<img src={image} alt="shoe" />
 			<div>
 				<p>{price}DA</p>
 				<button>Add to card</button>

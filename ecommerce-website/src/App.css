@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+    flex-direction: column;
     gap: 35px;
     min-height: 100vh;
     background-color: #272727;
@@ -22,4 +23,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.productContainer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
 }
