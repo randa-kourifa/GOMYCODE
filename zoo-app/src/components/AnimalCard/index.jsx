@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./index.module.css";
 
-function AnimalCard({ animal: { name, image, description } }) {
+function AnimalCard({ name, image, description }) {
   return (
     <div className={classes.container}>
       <p>{name}</p>
