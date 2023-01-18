@@ -15,7 +15,7 @@ export default function Counter() {
 			Counter
 			<p>{count}</p>
 			<button onClick={() => increment()}>Increment</button>
-			<button onClick={() => increment()}>decrement</button>
+			<button onClick={() => decrement()}>decrement</button>
 		</div>
 	)
 }

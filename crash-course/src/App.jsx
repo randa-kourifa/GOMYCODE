@@ -3,15 +3,14 @@ import "./App.css"
 
 function App() {
 	const myref = useRef(null)
-
-	const getRef = () => {
-		console.log(myref)
+	const handleClick = () => {
+		console.log(myref.current)
 	}
 
 	return (
 		<>
-			<button onClick={getRef} ref={myref}>
-				ref
+			<button onClick={handleClick} ref={myref}>
+				hfdskjfh
 			</button>
 		</>
 	)

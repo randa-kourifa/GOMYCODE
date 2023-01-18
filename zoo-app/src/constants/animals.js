@@ -30,4 +30,6 @@ export const animals = [{
     },
 
 ]
+
 export const something = "something";
+export default animals
