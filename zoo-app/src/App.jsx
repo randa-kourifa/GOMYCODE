@@ -28,6 +28,7 @@ function App() {
 						path="/"
 						element={<Home myanimals={myanimals} setmyanimals={setmyanimals} />}
 					/>
+					{/* on a ajouter :id dans le path pour pouvoir recuperer l'id de l'animal */}
 					<Route
 						path="/animals/:id"
 						element={<Animal myanimals={myanimals} />}
