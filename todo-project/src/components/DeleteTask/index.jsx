@@ -9,7 +9,7 @@ const DeleteTask = ({ id }) => {
 	return (
 		<AlertDialog.Root>
 			<AlertDialog.Trigger asChild>
-				<button className="Button violet">Delete account</button>
+				<button className="Button violet">Delete Task</button>
 			</AlertDialog.Trigger>
 			<AlertDialog.Portal>
 				<AlertDialog.Overlay className="AlertDialogOverlay" />
@@ -30,7 +30,7 @@ const DeleteTask = ({ id }) => {
 								onClick={() => dispatch(deleteTodo(id))}
 								className="Button red"
 							>
-								Yes, delete account
+								Yes, delete Task
 							</button>
 						</AlertDialog.Action>
 					</div>
