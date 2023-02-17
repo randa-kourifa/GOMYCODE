@@ -1,14 +1,12 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import AnimalCard from "../components/AnimalCard";
 import AnimalForm from "../components/AnimalForm";
 import Counter from "../components/Counter";
 import classes from "./Home.module.css";
 
-export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [myanimals, setmyanimals] = useState([]);
-
+export default function Home({ myanimals, setmyanimals }) {
+  const [isLoading, setIsLoading] = useState(false);
   const AddAnimal = async (e) => {
     //on empeche le comportement par defaut du form
     e.preventDefault();
@@ -42,20 +40,6 @@ export default function Home() {
     setmyanimals([...myanimals, newAnimal]);
   };
 
-  useEffect(() => {
-    //on creer une fonction async pour ramener nos data
-    //dans useEffect: car on a besoin d'attendre que
-    // les components soit dans le document(mounted)
-    // pour ensuite ramener notre data
-
-    const getAnimals = async () => {
-      const res = await axios.get("https://zoo-api-nhvk.onrender.com/animals");
-      setmyanimals(res.data); //on met nos données dans notre useState
-      setIsLoading(false); //on met isLoading a false pour afficher nos animaux
-    };
-    getAnimals();
-  }, []);
-
   return (
     <div>
       <Counter />
@@ -63,7 +47,7 @@ export default function Home() {
       <p>Add Your Animal</p>
       <AnimalForm AddAnimal={AddAnimal} />
       {isLoading ? (
-        <div> isloading</div>
+        <div>isloading</div>
       ) : (
         <div className={classes.animalsWrapper}>
           {myanimals?.map((animal, i) => (
